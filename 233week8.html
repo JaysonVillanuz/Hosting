@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="Text/Css" href="233week8.css">
+</head>
+<body>
+    <header>
+        <a href="#">Home</a>
+        <a href="#">Next Page</a>
+    </header>
+    <div class="container">
+        <P class="para1"></P>
+        <P class="para1"></P>
+        <P class="para1"></P>
+        <P id="para2"></P>
+        <p><a id="newlink" href="https://www.google.com/">Google</a></p>
+        <button onclick="button1()">Change Link</button>
+        <button onclick="button2()">Change Quary/Class Name Tag</button>
+    </div>
+    <script>
+        const x = document.getElementsByClassName("para1");
+        const a = x[0];
+        const s = x[1];
+        const d = x[2];
+
+        var c = document.getElementsByTagName("p");
+        c[0].innerHTML = "Tag 1";
+        c[1].innerHTML = "Tag 2";
+        c[2].innerHTML = "Tag 3";
+
+        var z = document.getElementById("para2");
+        document.getElementById("para2").innerHTML = z.innerHTML + "Id Tag";
+
+
+        function button1(){
+            const link = document.getElementById("newlink");
+        link.innerHTML = "Youtube";
+        link.href = "https://www.youtube.com/";
+        }
+
+
+        function button2(){
+            const body = document.querySelector("body");
+            body.style.backgroundImage = 'url(MR.jpg)';
+            const f = document.getElementById("para2");
+            f.style.color = 'white';
+            a.innerHTML = "Class Tag 1";
+            s.innerHTML = "Class Tag 2";
+            d.innerHTML = "Class Tag 3";
+            a.style.color = 'white';
+            s.style.color = 'white';
+            d.style.color = 'white';
+        }
+    </script>
+</body>
+</html>
